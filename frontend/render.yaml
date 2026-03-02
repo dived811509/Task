@@ -1,0 +1,16 @@
+# Render configuration for the backend service
+# Replace <your-mongo-uri> with the actual connection string or use environment variables
+
+services:
+  - type: web
+    name: listing-platform-backend
+    env: node
+    plan: free
+    branch: main
+    buildCommand: "npm install"
+    startCommand: "node server.js"
+    envVars:
+      - key: MONGODB_URI
+        value: "<your-mongo-uri>"
+      - key: JWT_SECRET
+        fromDatabase: jwt_secret
