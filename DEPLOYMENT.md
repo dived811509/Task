@@ -2,8 +2,8 @@
 
 This project consists of two parts:
 
-* **Backend** – Node.js/Express app with MongoDB (Mongoose) and JWT authentication.
-* **Frontend** – React application built with Vite and styled with Tailwind.
+- **Backend** – Node.js/Express app with MongoDB (Mongoose) and JWT authentication.
+- **Frontend** – React application built with Vite and styled with Tailwind.
 
 You can host the backend on Render (free tier) or any Node-compatible platform, and the frontend on Vercel.
 
@@ -15,10 +15,10 @@ You can host the backend on Render (free tier) or any Node-compatible platform, 
 2. Sign in to [Render](https://render.com) and create a new **Web Service**.
 3. Connect your GitHub repo and select the `backend` folder (if you have a monorepo) or root if structured accordingly.
 4. Set the environment variables:
-   * `MONGODB_URI` – your MongoDB Atlas connection string
-   * `JWT_SECRET` – a random secret key for signing tokens
-   * `CORS_ORIGIN` – your frontend URL (e.g. `https://your-frontend.vercel.app`)
-   * `PORT` – usually `5000` (Render overrides this automatically).
+   - `MONGODB_URI` – your MongoDB Atlas connection string
+   - `JWT_SECRET` – a random secret key for signing tokens
+   - `CORS_ORIGIN` – your frontend URL (e.g. `https://your-frontend.vercel.app`)
+   - `PORT` – usually `5000` (Render overrides this automatically).
 5. Use `npm install` as the build command and `node server.js` as the start command.
 6. Deploy and obtain the backend URL (e.g. `https://listing-backend.onrender.com`).
 
@@ -49,7 +49,7 @@ You can host the backend on Render (free tier) or any Node-compatible platform, 
 
 ## 3. Additional Notes
 
-* **Local Development**: Use `.env` files for both backend and frontend.
+- **Local Development**: Use `.env` files for both backend and frontend.
   - `backend/.env`:
     ```env
     PORT=5000
@@ -61,10 +61,10 @@ You can host the backend on Render (free tier) or any Node-compatible platform, 
     ```env
     VITE_API_URL=http://localhost:5000/api
     ```
-* **CORS**: Ensure the backend allows the origin used by the frontend both locally and in production.
-* **Rewrites**: Without the rewrite config, direct navigation or refreshes on client routes will return 404 on static hosts.
-* If you need to change the API base URL after deployment, update the environment variable on your hosting service and redeploy.
-* **Troubleshooting**: See `VERCEL_404_FIX.md` for SPA routing issues.
+- **CORS**: Ensure the backend allows the origin used by the frontend both locally and in production.
+- **Rewrites**: Without the rewrite config, direct navigation or refreshes on client routes will return 404 on static hosts.
+- If you need to change the API base URL after deployment, update the environment variable on your hosting service and redeploy.
+- **Troubleshooting**: See `VERCEL_404_FIX.md` for SPA routing issues.
 
 ---
 
